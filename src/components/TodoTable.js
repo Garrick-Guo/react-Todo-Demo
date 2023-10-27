@@ -1,24 +1,25 @@
-import TodoRowitem from './TodoRowItem';
+import TodoRowitem from "./TodoRowItem";
 function TodoTable(props) {
-    return (
-        <table className='table table-hover'>
-            <thead>
-                <tr>
-                    <th scope='col'>#</th>
-                    <th scope='col'>Description</th>
-                    <th scope='col'>Assigned</th>
-                </tr>
-            </thead>
-            <tbody>
-                {props.todos.map(todo => (
-                    <TodoRowitem
-                        rowNumber={todo.rowNumber}
-                        rowDescription={todo.rowDescription}
-                        rowAssigned={todo.rowAssigned}
-                    />
-                ))}
-            </tbody>
-        </table>
-    )
+  return (
+    <table className="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Description</th>
+          <th scope="col">Assigned</th>
+        </tr>
+      </thead>
+      <tbody>
+        {props.todos.map((todo) => (
+          <TodoRowitem
+            key={todo.rowNumber}
+            rowNumber={todo.rowNumber}
+            rowDescription={todo.rowDescription}
+            rowAssigned={todo.rowAssigned}
+          />
+        ))}
+      </tbody>
+    </table>
+  );
 }
-export default TodoTable
+export default TodoTable;
