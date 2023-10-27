@@ -1,9 +1,9 @@
-function TodoRowitem() {
+function TodoRowitem(props) {
     return (
         <tr>
-            <th scope="row">1</th>
-            <th>Feed dog</th>
-            <th>Eric</th>
+            <th scope="row">{props.rowNumber}</th>
+            <th>{props.rowDescription}</th>
+            <th>{props.rowAssigned}</th>
         </tr>
 
     )
